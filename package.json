@@ -6,7 +6,8 @@
         "start": "ng serve --port 4448",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
-        "test": "ng test"
+        "test": "ng test",
+        "release": "cd projects/* && npm version patch && cd ../../ && ng build button-group && cd dist/* && npm publish --access=public"
     },
     "private": true,
     "dependencies": {
