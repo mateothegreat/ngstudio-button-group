@@ -1,0 +1,14 @@
+<div class="wrapper"
+     [style.--background-color]="instance.config.theme?.backgroundColor">
+
+    <div *ngFor="let button of instance?.config.buttons"
+         [style.--hover-background-color]="instance.config.theme?.hover?.backgroundColor"
+         [class.selected]="button.label === selected?.label"
+         (click)="onClick(button)"
+         class="button">
+
+        {{ button.label }}
+
+    </div>
+
+</div>
