@@ -3,7 +3,8 @@
 
     <div *ngFor="let button of instance?.config.buttons"
          [style.--hover-background-color]="instance.config.theme?.hover?.backgroundColor"
-         [class.selected]="button.label === selected?.label"
+         [style.--active-background-color]="instance.config.theme?.active?.backgroundColor"
+         [class.selected]="button.label === instance.config.selected?.label"
          (click)="onClick(button)"
          class="button">
 

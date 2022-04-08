@@ -17,44 +17,53 @@ export class AppComponent implements AfterViewInit {
 
     public ngAfterViewInit() {
 
-        this.buttonGroupService.open('one', this.one, {
+        setTimeout(() => {
 
-            buttons: [
+            this.buttonGroupService.open('one', this.one, {
 
-                {
+                buttons: [
+
+                    {
+
+                        label: 'one'
+
+                    }, {
+
+                        label: 'two'
+
+                    }
+
+                ],
+                selected: {
 
                     label: 'one'
 
-                }, {
-
-                    label: 'two'
-
-                }
-
-            ],
-
-            theme: {
-
-                backgroundColor: '#999',
-
-                hover: {
-
-                    backgroundColor: '#fff'
-
                 },
-                active: {
 
-                    backgroundColor: '##eee'
+                theme: {
+
+                    backgroundColor: '#999',
+
+                    hover: {
+
+                        backgroundColor: '#fff'
+
+                    },
+                    active: {
+
+                        backgroundColor: 'red'
+
+                    }
 
                 }
 
-            }
+            }).click$.subscribe(button => {
 
-        }).click$.subscribe(button => {
+                console.log(button);
 
-            console.log(button);
+            });
 
-        });
+        }, 500);
 
     }
 

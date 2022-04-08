@@ -10,11 +10,10 @@ import { ButtonGroupInstance } from './button-group-instance';
 export class ButtonGroupComponent {
 
     public instance: ButtonGroupInstance = null;
-    public selected: Button;
 
     public onClick(button: Button): void {
 
-        this.selected = button;
+        this.instance.config.selected = button;
 
         this.instance.click$.next(button);
 
