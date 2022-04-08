@@ -25,11 +25,13 @@ export class AppComponent implements AfterViewInit {
 
                     {
 
-                        label: 'one'
+                        label: 'one',
+                        iconClass: 'fa-duotone fa-objects-column'
 
                     }, {
 
-                        label: 'two'
+                        label: 'two',
+                        iconClass: 'fa-solid fa-cog'
 
                     }
 

@@ -8,7 +8,15 @@
          (click)="onClick(button)"
          class="button">
 
-        {{ button.label }}
+        <div *ngIf="button.iconClass"
+             class="icon"
+             [class]="button.iconClass"></div>
+
+        <div class="label">
+
+            {{ button.label }}
+
+        </div>
 
     </div>
 
